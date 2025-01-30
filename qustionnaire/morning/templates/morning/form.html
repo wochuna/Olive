@@ -7,6 +7,10 @@
 </head>
 <body>
     <form>
+
+    <form method="POST" action="{% url 'FormView' %}">
+         {% csrf_token %}
+
 <!--Radio button-->
 <p>Please select your gender here</p>
     <input type="radio" id="male" name="gender" value="Male">

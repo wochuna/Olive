@@ -1,5 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import MyForm
+from .models import Client
 
-# Create your views here.
+#My Views
+
 def FormView(request):
-    return render(request, 'morning/form.html')
+    if request.method == 'POST':
+        form = MyForm(request.POST)
+        if form.is_valid():
+            form.save()  
+            return redirect('success_url')
+    else:
+        form = MyForm()
+    return render(request, 'form.html', {'form': form})

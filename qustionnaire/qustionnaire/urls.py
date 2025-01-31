@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from morning.views import FormView
+from morning.views import form_view,success_view
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('form/',FormView, name='form'),
+    path('form/',form_view, name='form'),
+    path('success/',success_view, name='success'),
 ]

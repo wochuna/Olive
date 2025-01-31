@@ -1,7 +1,26 @@
 from django import forms
-from .models import Client
+from .models import Feedback
 
 class MyForm(forms.ModelForm):
-    class Meta:
-        model = Client  # Specify the model to use
-        fields = ['field1', 'field2']  # List the fields to include in the form
+    gender = [('Male', 'Male'), ('Female', 'Female')]
+    month = [
+        ('January', 'January'), ('February', 'February'),
+        ('March', 'March'), ('April', 'April'),
+        ('May', 'May'), ('June', 'June'),
+        ('July', 'July'), ('August', 'August'),
+        ('September', 'September'), ('October', 'October'),
+        ('November', 'November'), ('December', 'December')
+    ]
+    experience = [
+        ('4', 'Very Satisfied'),
+        ('3', 'Satisfied'),
+        ('2', 'Unsatisfied'),
+        ('1', 'Very Unsatisfied')
+    ]
+class Meta:
+    model = Feedback
+    fields = ['gender', 'month', 'experience']
+    widgets = {
+            'month': forms.CheckboxSelectMultiple(),  
+        }
+   

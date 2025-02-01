@@ -11,6 +11,11 @@ class MyForm(forms.ModelForm):
         ('September', 'September'), ('October', 'October'),
         ('November', 'November'), ('December', 'December')
     ]
+    month = forms.MultipleChoiceField(
+    choices=month,
+    widget=forms.CheckboxSelectMultiple,
+    required=False,
+    )
     experience = [
         ('4', 'Very Satisfied'),
         ('3', 'Satisfied'),
@@ -20,7 +25,5 @@ class MyForm(forms.ModelForm):
     class Meta:
         model = Feedback
         fields = ['gender', 'month', 'experience']
-        widgets = {
-                'month': forms.CheckboxSelectMultiple(),  
-            }
-    
+
+ 

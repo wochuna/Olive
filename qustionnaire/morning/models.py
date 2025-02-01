@@ -12,7 +12,15 @@ class Feedback(models.Model):
         ('Female', 'Female')
     ]
     gender = models.CharField(max_length=6, choices=gender, default='Male')
-    month = models.CharField(max_length=255, null=True)
+    month = [
+        ('January', 'January'), ('February', 'February'),
+        ('March', 'March'), ('April', 'April'),
+        ('May', 'May'), ('June', 'June'),
+        ('July', 'July'), ('August', 'August'),
+        ('September', 'September'), ('October', 'October'),
+        ('November', 'November'), ('December', 'December')
+    ]
+    month = models.CharField(max_length=255, null=True, blank=True)
     experience = [
         ('4', 'Very Satisfied'),
         ('3', 'Satisfied'),

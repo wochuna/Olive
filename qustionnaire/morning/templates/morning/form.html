@@ -8,16 +8,10 @@
 <body>
     <form>
 
-    <form method="POST" action="{% url 'FormView' %}">
+    <form method="POST" action="{% url 'form_view' %}">
          
          {% csrf_token %}
          {{ form.as_p }}  <!--Automatically generated-->
- 
-
-
-
-
-
         <button type="button">Submit</button>
 
    

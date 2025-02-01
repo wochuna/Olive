@@ -17,10 +17,10 @@ class MyForm(forms.ModelForm):
         ('2', 'Unsatisfied'),
         ('1', 'Very Unsatisfied')
     ]
-class Meta:
-    model = Feedback
-    fields = ['gender', 'month', 'experience']
-    widgets = {
-            'month': forms.CheckboxSelectMultiple(),  
-        }
-   
+    class Meta:
+        model = Feedback
+        fields = ['gender', 'month', 'experience']
+        widgets = {
+                'month': forms.CheckboxSelectMultiple(),  
+            }
+    

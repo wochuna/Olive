@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from morning.views import form_view,success_view
 
-
+app_name = 'morning'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('form/',form_view, name='form'),
+    path('form/',form_view, name='form_view'),
     path('success/',success_view, name='success'),
 ]

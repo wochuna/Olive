@@ -10,6 +10,7 @@ def form_view(request):
         if form.is_valid():
 
             feedback = form.save(commit=False)
+            feedback.month = ','.join(form.cleaned_data['month'])
             feedback.save()
             return redirect('success')
     else:

@@ -27,7 +27,7 @@ class Feedback(models.Model):
         ('2', 'Unsatisfied'),
         ('1', 'Very Unsatisfied')
         ]
-    experience = models.CharField(max_length=20, choices=experience, default='Satisfied')
+    experience = models.CharField(max_length=20, choices=experience, default='3')
 
 class Meta:
     db_table = 'feedback'

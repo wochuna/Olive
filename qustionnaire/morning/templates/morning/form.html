@@ -6,13 +6,13 @@
     <title>Questionnaire</title>
 </head>
 <body>
-    <form>
+    
 
     <form method="POST" action="{% url 'form_view' %}">
          
          {% csrf_token %}
          {{ form.as_p }}  <!--Automatically generated-->
-        <button type="button">Submit</button>
+        <button type="Submit">Submit</button>
 
    
    </form> 

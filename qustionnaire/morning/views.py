@@ -13,6 +13,8 @@ def form_view(request):
             feedback.month = ','.join(form.cleaned_data['month'])
             feedback.save()
             return redirect('success')
+        else:
+            print("Form error:", form.errors)
     else:
         form = MyForm()
     return render(request, 'morning/form.html', {'form': form})

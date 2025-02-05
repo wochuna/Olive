@@ -22,12 +22,12 @@ class Data(models.Model):
     ]
     month = models.CharField(max_length=255, null=True, blank=True)
     experience = [
-        ('4', 'Very Satisfied'),
-        ('3', 'Satisfied'),
-        ('2', 'Unsatisfied'),
-        ('1', 'Very Unsatisfied')
+          ('Very Satisfied','Very Satisfied'),
+        ('Satisfied', 'Satisfied'),
+        ('Unsatisfied','Unsatisfied'),
+        ('Very Unsatisfied', 'Very Unsatisfied')
         ]
-    experience = models.CharField(max_length=20, choices=experience, default='3')
+    experience = models.CharField(max_length=20, choices=experience, default='Satisfied')
 
 class Meta:
     db_table = 'data'

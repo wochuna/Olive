@@ -17,10 +17,10 @@ class MyForm(forms.ModelForm):
     required=False,
     )
     experience = [
-        ('4', 'Very Satisfied'),
-        ('3', 'Satisfied'),
-        ('2', 'Unsatisfied'),
-        ('1', 'Very Unsatisfied')
+        ('Very Satisfied','Very Satisfied'),
+        ('Satisfied', 'Satisfied'),
+        ('Unsatisfied','Unsatisfied'),
+        ('Very Unsatisfied', 'Very Unsatisfied')
     ]
     class Meta:
         model = Data

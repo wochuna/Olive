@@ -4,7 +4,7 @@ This model describe the table that stores feedback including gender,months visit
 
 from django.db import models
 
-class Feedback(models.Model):
+class Data(models.Model):
     id = models.AutoField(primary_key=True)
 
     gender = [
@@ -30,6 +30,6 @@ class Feedback(models.Model):
     experience = models.CharField(max_length=20, choices=experience, default='3')
 
 class Meta:
-    db_table = 'feedback'
+    db_table = 'data'
 def __str__(self):
     return f"{self.gender},{self.month},{self.experience}"

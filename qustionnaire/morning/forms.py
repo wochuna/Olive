@@ -1,5 +1,5 @@
 from django import forms
-from .models import Feedback
+from .models import Data
 
 class MyForm(forms.ModelForm):
     gender = [('Male', 'Male'), ('Female', 'Female')]
@@ -23,7 +23,7 @@ class MyForm(forms.ModelForm):
         ('1', 'Very Unsatisfied')
     ]
     class Meta:
-        model = Feedback
+        model = Data
         fields = ['gender', 'month', 'experience']
 
  
